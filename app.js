@@ -94,6 +94,10 @@ function gameOver(won, msg) {
 
   //Let user know they won
   setMessage(msg);
+
+  //Play Again
+  guessBtn.value = "Play Again";
+  guessBtn.className += "play-again";
 }
 
 //setMessage
