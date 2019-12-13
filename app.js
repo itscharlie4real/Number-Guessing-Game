@@ -18,3 +18,22 @@ const game = document.querySelector("#game"),
   guessBtn = document.querySelector("#guess-btn"),
   guessInput = document.querySelector("#guess-input"),
   message = document.querySelector(".message");
+
+//Assign UI min and max
+minNum.textContent = min;
+maxNum.textContent = max;
+
+//Listen for guess
+guessBtn.addEventListener("click", function() {
+  let guess = parseInt(guessInput.value);
+
+  //validate input
+  if (guess === isNaN || guess < min || guess > max) {
+    setMessage(`Plase Enter a Number between ${min} and ${max}`);
+  }
+});
+
+//setMessage
+function setMessage(msg) {
+  message.textContent = msg;
+}
